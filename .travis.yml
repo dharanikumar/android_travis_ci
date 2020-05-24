@@ -5,4 +5,11 @@ android:
     - build-tools-29.0.2
     - android-29
     - extra
-script: ./gradlew build 
+jobs:
+  include:
+    - stage: build
+      name: "Build"
+      script: ./gradlew build
+    - stage: test
+      name: "Test"
+      script: ./gradlew test
