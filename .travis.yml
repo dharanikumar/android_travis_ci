@@ -13,3 +13,6 @@ jobs:
     - stage: test
       name: "Test"
       script: ./gradlew test
+    - stage: Lint
+      name: "Lint"
+      script: ./gradlew lint
