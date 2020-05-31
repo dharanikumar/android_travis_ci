@@ -9,7 +9,7 @@ jobs:
   include:
     - stage: build
       name: "Build"
-      script: ./gradlew build
+      script: ./gradlew clean build -Pbuild=devCI
     - stage: test
       name: "Test"
       script: ./gradlew test
